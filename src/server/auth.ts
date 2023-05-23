@@ -4,7 +4,6 @@ import {
   type NextAuthOptions,
   type DefaultSession,
 } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import LineProvider from "next-auth/providers/line";
 import { env } from "~/env.mjs";
@@ -49,8 +48,8 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     LineProvider({
-      clientId: process.env.LINE_CLIENT_ID,
-      clientSecret: process.env.LINE_CLIENT_SECRET
+      clientId: env.LINE_CLIENT_ID,
+      clientSecret: env.LINE_CLIENT_SECRET
     })
     /**
      * ...add more providers here.
