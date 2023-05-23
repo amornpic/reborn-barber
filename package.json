@@ -1,13 +1,13 @@
 {
-  "name": "my-t3-app",
+  "name": "reborn-barber",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start -p 4000"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.5",
